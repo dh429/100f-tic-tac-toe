@@ -21,6 +21,17 @@ def displayString(board):
   return value
   str the gameboard
   """
+
+  for i in range(len(board)):
+    if board[i] == 0:
+      board.pop(i)
+      board.insert(i, "-")
+
+
+  print(f"{board[6]}{board[7]}{board[8]}")
+  print(f"{board[3]}{board[4]}{board[5]}")
+  print(f"{board[0]}{board[1]}{board[2]}")
+
   return None
 
 def main():
