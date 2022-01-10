@@ -18,6 +18,8 @@ def read(square,board):
   the str value corresponding to the content of the square being checked
   None if the square is empty
   """
+  #Takes the board list and determines what symbol is in the given space
+
   if board[square - 1] == "X":
     return "X"
   
@@ -41,6 +43,8 @@ def write(square,board,player):
   empty.  If the square is not empty, it should not change the gameboard and
   should return the original, unchanged gameboard data
   """
+
+  #Try
   if board[square - 1] == 0:
     board.pop(square - 1)
     board.insert(square-1, player)
