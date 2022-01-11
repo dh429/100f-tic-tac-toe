@@ -27,12 +27,40 @@ def displayString(board):
       board.pop(i)
       board.insert(i, "-")
 
+  boardstr = ""
+  startlist = 6
 
-  print(f"{board[6]}{board[7]}{board[8]}")
-  print(f"{board[3]}{board[4]}{board[5]}")
-  print(f"{board[0]}{board[1]}{board[2]}")
+  for i in range(3):
+    if i != 2:
+      boardstr = boardstr + board[startlist] + "."
+      startlist = startlist + 1
+    else:
+      boardstr = boardstr + board[startlist]
 
-  return None
+
+  boardstr = boardstr + "\n"
+  startlist = 3
+
+  for i in range(3):
+    if i != 2:
+      boardstr = boardstr + board[startlist] + "."
+      startlist = startlist + 1
+    else:
+      boardstr = boardstr + board[startlist]
+
+  boardstr = boardstr + "\n"
+  startlist = 0
+
+  for i in range(3):
+    if i != 2:
+      boardstr = boardstr + board[startlist] + "."
+      startlist = startlist + 1
+    else:
+      boardstr = boardstr + board[startlist]
+
+  print(boardstr)
+  return boardstr
+
 
 def main():
   board = [ 'O' , 0 , 0 , 'X' , 'O' , 0 , 0 , 0 , 'X' ] 
