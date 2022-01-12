@@ -54,15 +54,9 @@ def write(square,board,player):
 
 def mainRead():
   board = [ 0, 'X', 0, 'X', 'O', 'O', 0 , 0, 0]
-<<<<<<< HEAD
   assert read(3, board) == None
   assert read(2, board) == 'X'
   assert read(5, board) == 'O'
-=======
-  assert read(3,board) == None
-  assert read(2,board) == 'X'
-  assert read(5,board) == 'O'
->>>>>>> 4a144a13c71d0d5199051e1941c6ceeef751c4f6
 
 def mainWrite():
   board = [ 0,0,0,0,0,0,0,0,0,0]
