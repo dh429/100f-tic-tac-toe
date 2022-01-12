@@ -44,7 +44,7 @@ def write(square,board,player):
   should return the original, unchanged gameboard data
   """
 
-  #Try
+
   if board[square - 1] == 0:
     board.pop(square - 1)
     board.insert(square-1, player)
