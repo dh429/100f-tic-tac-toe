@@ -28,38 +28,22 @@ def displayString(board):
       board.insert(i, "-")
 
   boardstr = ""
-  startlist = 6
+  
+  def MakeBoard(boardl, startlist):
+    boardstr = ""
+    for i in range(3):
+        if i != 2:
+            boardstr = boardstr + boardl[startlist] + " "
+            startlist = startlist + 1
+        else:
+            boardstr = boardstr + board[startlist]
+    return boardstr
 
-  for i in range(3):
-    if i != 2:
-      boardstr = boardstr + board[startlist] + "."
-      startlist = startlist + 1
-    else:
-      boardstr = boardstr + board[startlist]
-
-
-  boardstr = boardstr + "\n"
-  startlist = 3
-
-  for i in range(3):
-    if i != 2:
-      boardstr = boardstr + board[startlist] + "."
-      startlist = startlist + 1
-    else:
-      boardstr = boardstr + board[startlist]
-
-  boardstr = boardstr + "\n"
-  startlist = 0
-
-  for i in range(3):
-    if i != 2:
-      boardstr = boardstr + board[startlist] + "."
-      startlist = startlist + 1
-    else:
-      boardstr = boardstr + board[startlist]
-
-  print(boardstr)
-  return boardstr
+  row1 = MakeBoard(board, 6)
+  row2 = MakeBoard(board, 3)
+  row3 = MakeBoard(board, 0)
+  fullboard = row1 + "\n" + row2 + "\n" + row3
+  return fullboard
 
 
 def main():
